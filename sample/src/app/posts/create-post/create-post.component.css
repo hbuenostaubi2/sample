@@ -1,0 +1,13 @@
+mat-card {
+  width: 60%;
+  margin:auto;
+}
+
+button{
+  width: 20%;
+  margin: 5px;
+}
+
+textarea {
+  width:100%;
+}
