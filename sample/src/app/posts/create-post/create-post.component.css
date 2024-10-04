@@ -1,6 +1,11 @@
 mat-card {
-  width: 60%;
-  margin:auto;
+  margin:5px;
+}
+
+form {
+  width: 50%;
+  margin: auto;
+  display: grid;
 }
 
 button{
@@ -8,6 +13,6 @@ button{
   margin: 5px;
 }
 
-textarea {
-  width:100%;
-}
+/*textarea {*/
+/*  width:100%;*/
+/*}*/

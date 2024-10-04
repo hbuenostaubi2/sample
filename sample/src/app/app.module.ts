@@ -16,6 +16,7 @@ import {FormsModule} from "@angular/forms";
 import {MatExpansionModule} from "@angular/material/expansion";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import { PostListComponent } from './posts/post-list/post-list.component';
+import {CommonModule} from "@angular/common";
 
 
 @NgModule({
@@ -37,7 +38,7 @@ import { PostListComponent } from './posts/post-list/post-list.component';
     MatInputModule,
     FormsModule,
     BrowserAnimationsModule,
-    MatExpansionModule
+    MatExpansionModule, CommonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
