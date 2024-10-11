@@ -17,6 +17,7 @@ import {MatExpansionModule} from "@angular/material/expansion";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import { PostListComponent } from './posts/post-list/post-list.component';
 import {CommonModule} from "@angular/common";
+import {HttpClientModule} from "@angular/common/http";
 
 
 @NgModule({
@@ -30,6 +31,7 @@ import {CommonModule} from "@angular/common";
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     /*angular material imports*/
     MatToolbarModule,
     MatButtonModule,
