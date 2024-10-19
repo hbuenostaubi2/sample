@@ -4,7 +4,6 @@ import mongoose from "mongoose";
 
 import Post from './model/post.js'
 
-
 mongoose.connect(process.env.MONGODB_KEY)
     .then(() => {
         console.log('connected to db');
@@ -34,25 +33,36 @@ app.use((req, res, next) => {
 
 app.post('/api/posts', (req, res, next) => {
     const post = new Post({
-            title: req.body.title,
-            content: req.body.content
-        });
-    console.log(post);
+        title: req.body.title,
+        content: req.body.content
+    });
 
-    post.save();
-
-    res.status(201).json(
-        {success: true}
-    );
+    post.save().then(result => {
+        console.log(result);
+        res.status(201).json(
+            {
+                success: true,
+                postId: result._id
+            }
+        );
+    });
 });
 
 app.get('/api/posts', (req, res, next) => {
-    const post = [
-        {id: 'id1', title: 'First Server Side Title', content: 'First server side content'},
-        {id: 'id2', title: 'Second Server Side Title', content: 'Second server side content'},
-        {id: 'id2', title: 'Third Server Side Title', content: 'Third server side content'},
-    ];
-    res.status(200).json({success: true, data: post});
+    Post.find()
+        .then(data => {
+            res.status(200).json({
+                success: true,
+                data: data
+            });
+        });
+});
+
+app.delete('/api/posts/:id', (req, res, next) => {
+    Post.deleteOne({_id: req.params.id}).then(result => {
+        console.log(result);
+        res.status(200).json({success: true});
+    });
 });
 
 export default app;
