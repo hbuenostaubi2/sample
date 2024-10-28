@@ -13,6 +13,9 @@ button{
   margin: 5px;
 }
 
+mat-spinner {
+  margin: auto;
+}
 /*textarea {*/
 /*  width:100%;*/
 /*}*/

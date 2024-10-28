@@ -18,6 +18,7 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import { PostListComponent } from './posts/post-list/post-list.component';
 import {CommonModule} from "@angular/common";
 import {HttpClientModule} from "@angular/common/http";
+import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
 
 
 @NgModule({
@@ -40,7 +41,7 @@ import {HttpClientModule} from "@angular/common/http";
     MatInputModule,
     FormsModule,
     BrowserAnimationsModule,
-    MatExpansionModule, CommonModule
+    MatExpansionModule, CommonModule, MatProgressSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
