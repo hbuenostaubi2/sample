@@ -2,6 +2,9 @@
   <span routerLink="/"><a>My App</a></span>
   <span class="spacer"></span>
   <ul>
+    <li>
+      <a mat-button routerLink="/joke" routerLinkActive="active">Jokes</a>
+    </li>
     <li *ngIf="userIsAuthenticated">
       <a mat-button routerLink="/create" routerLinkActive="active">New Post</a>
     </li>
